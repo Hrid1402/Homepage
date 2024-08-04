@@ -1,3 +1,46 @@
+/*
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+*/
 body{
-    background-color: beige;
+    background-color: rgb(255, 255, 255);
+}
+.shape{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0891b2; /* Adjust the color as needed */
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 56%); /* Adjust to shape your background */
+    object-fit: cover;
+    z-index: -1; /* Ensure the shape is behind the content */
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header .imgContent{
+    
+}
+header .imgContent h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: white;
+}
+header .imgContent img{
+    height: 150%;
+    width: 100%;
+    object-fit: cover;
+}
+header .aboutMe{
+    background-color: white;
+    box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.274);
 }
