@@ -90,11 +90,11 @@ header .aboutMe .iconLine{
     justify-content: end;
     gap: .3125rem;
 }
-header .aboutMe img{
+header .aboutMe .iconLine img{
     height: 1.5625rem;
     transition: transform 0.3s;
 }
-header .aboutMe img:hover{
+header .aboutMe .iconLine img:hover{
     transform: translate(0, -5px);
 }
 main{
@@ -236,4 +236,186 @@ footer .catBottom{
     max-height: 500px;
     height: 100%;
     object-fit: cover;
+}
+.phoneCat{
+    display: none;
+}
+.imgContentSmall{
+    display: none;
+}
+.aboutMeSmall{
+    display: none;
+}
+@media (max-width:1260px) {
+    header{
+        flex-direction: row;
+        align-items: end;
+        justify-content: end;
+        margin-left: 5%;
+    }
+    .imgContentSmall{
+        display: block;
+        position: relative;
+        max-width: 400px;
+    }
+    .imgContentSmall h1{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: white;
+        margin: 0;
+        padding: 0 10px;
+        font-family: "Playfair Display", serif;
+        font-size: 2.2rem;
+        text-shadow: -1px 0px 5px rgba(0,0,0,1);
+    }
+    
+    .catConrner{
+        display: block;
+        height: auto;
+        width: 100%;
+        float: left;
+        border-radius: 0 0 25px 0;
+        box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.274);
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    header .imgContent{
+        display: none;
+    }
+    main{
+        margin-top: 15%;
+    }
+    header .aboutMe{
+        overflow: hidden;
+        height: 100%;
+        width: 1000%;
+        padding: 0;
+        min-width: 700px;
+        background-color: white;
+        box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.274);
+    }
+    header .aboutMe p{
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    header .aboutMe .iconLine {
+        padding-right: 5%;
+    }
+}
+@media(max-width: 1030px){
+    footer .catBottom{
+        margin-left: 25px;
+        max-height: 500px;
+        height: 100%;
+        object-fit: cover;
+        content: url(imgs/catCallTablet.jpg);
+    }
+}
+@media (max-width: 782px) {
+    header .aboutMe {
+        min-width: 0;
+    }
+    .imgContentSmall{
+        display: block;
+        position: relative;
+        max-width: 300px;
+    }
+}
+@media(max-width: 664px){
+    footer .catBottom{
+        margin-left: 25px;
+        max-height: 300px;
+        height: 100%;
+        object-fit: cover;
+        content: url(imgs/catCallTablet.jpg);
+    }
+}
+@media(max-width: 500px){
+    footer .catBottom{
+        display: none;
+    }
+    .phoneCat{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    .imgContentSmall{
+        display: none;
+    }
+    .aboutMeSmall{
+        display: block;
+        margin-bottom: 35%;
+    }
+    .aboutMeSmall h2{
+        color: black;
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3rem;    
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .aboutMeSmall p{
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+    .aboutMeSmall .iconLine{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: .9125rem;
+    }
+    .aboutMeSmall .iconLine img{
+        height: 40px;
+        transition: transform 0.3s;
+    }
+    
+    main .block .bottomPart {
+        min-height: 14.380rem;
+    }
+    article{
+        margin-left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        row-gap: 4rem;
+        column-gap: 4rem;
+    }
+    main .block{
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        min-width: 16.75rem;
+        box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.274);
+    }
+    footer .contact .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+    header .imgContent{
+        display: block;
+        width: 90%;
+        height: 400px;
+        margin-right: 5%;
+    }
+    header .aboutMe{
+        display: none;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+    main h3 {
+        text-align: center;
+    }
 }
